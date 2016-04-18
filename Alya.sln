@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alya.Util", "Alya.Util\Alya.Util.csproj", "{2041C89D-3167-4ACA-8C6D-D1195AE4EDAE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alya.DataAccess", "Alya.DataAccess\Alya.DataAccess.csproj", "{0C9C5008-3602-45C8-8927-64ED9E7B7CF0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alya.DataClient", "Alya.DataClient\Alya.DataClient.csproj", "{6057D726-DC77-469D-B951-080D140EC5DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alya.WebAPI", "Alya.WebAPI\Alya.WebAPI.csproj", "{14D2B9AB-2EF3-4FA8-8184-AF992F26D39E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ayla.UICore", "Ayla.UICore\Ayla.UICore.csproj", "{FF38F9C9-DD3D-4451-87BB-6727F4C85231}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2041C89D-3167-4ACA-8C6D-D1195AE4EDAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2041C89D-3167-4ACA-8C6D-D1195AE4EDAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2041C89D-3167-4ACA-8C6D-D1195AE4EDAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2041C89D-3167-4ACA-8C6D-D1195AE4EDAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C9C5008-3602-45C8-8927-64ED9E7B7CF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C9C5008-3602-45C8-8927-64ED9E7B7CF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C9C5008-3602-45C8-8927-64ED9E7B7CF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C9C5008-3602-45C8-8927-64ED9E7B7CF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6057D726-DC77-469D-B951-080D140EC5DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6057D726-DC77-469D-B951-080D140EC5DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6057D726-DC77-469D-B951-080D140EC5DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6057D726-DC77-469D-B951-080D140EC5DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14D2B9AB-2EF3-4FA8-8184-AF992F26D39E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14D2B9AB-2EF3-4FA8-8184-AF992F26D39E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14D2B9AB-2EF3-4FA8-8184-AF992F26D39E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14D2B9AB-2EF3-4FA8-8184-AF992F26D39E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF38F9C9-DD3D-4451-87BB-6727F4C85231}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF38F9C9-DD3D-4451-87BB-6727F4C85231}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF38F9C9-DD3D-4451-87BB-6727F4C85231}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF38F9C9-DD3D-4451-87BB-6727F4C85231}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
