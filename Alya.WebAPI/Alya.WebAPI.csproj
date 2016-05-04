@@ -82,6 +82,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AlyaApiController.cs" />
+    <Compile Include="InheritedRouteProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -90,6 +92,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="FodyWeavers.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Alya.Core\Alya.Core.csproj">
+      <Project>{399458f1-0318-4e5f-95ec-0b95eecd7f35}</Project>
+      <Name>Alya.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Alya.DataAccess\Alya.DataAccess.csproj">
+      <Project>{0c9c5008-3602-45c8-8927-64ed9e7b7cf0}</Project>
+      <Name>Alya.DataAccess</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.2.0.1.6505\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.0.1.6505\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />

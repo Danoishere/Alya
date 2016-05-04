@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Alya.DataAccess
+namespace Alya.Core
 {
-    public class Class1
+
+    public class EntityBase
     {
+        public int Id { get; set; }
     }
 }
