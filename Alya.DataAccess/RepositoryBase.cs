@@ -9,8 +9,19 @@ using System.Threading.Tasks;
 
 namespace Alya.DataAccess
 {
+
+    public static class RepositoryFactory
+    {
+        public static IRepository<TRepositoryEntity> Create<TRepositoryEntity>() where TRepositoryEntity : EntityBase
+        {
+            return Activator.CreateInstance<RepositoryBase<TRepositoryEntity>>();
+        }
+    }
+
     public class RepositoryBase<TEntity> : IRepository<TEntity> where TEntity : EntityBase
     {
+        protected RepositoryBase(){}
+
         public async Task Delete(TEntity entity)
         {
             using (var context = DataAccess.Context)

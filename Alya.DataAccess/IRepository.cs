@@ -19,7 +19,7 @@ namespace Alya.DataAccess
         Task<TEntity> GetById(int id);
         Task<TEntity> GetFirst();
 
-        Task<TEntity> GetSingleByExpression(Expression<Func<bool,TEntity>> expression);
-        Task<IList<TEntity>> GetByExpression(Expression<Func<bool, TEntity>> expression);
+        Task<TEntity> GetSingleByExpression(Expression<Func<TEntity,bool>> expression);
+        Task<IList<TEntity>> GetByExpression(Expression<Func<TEntity,bool>> expression);
     }
 }
