@@ -75,12 +75,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="FodyWeavers.xml" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Alya.Core\Alya.Core.csproj">
+      <Project>{399458F1-0318-4E5F-95EC-0B95EECD7F35}</Project>
+      <Name>Alya.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Alya.Util\Alya.Util.csproj">
       <Project>{2041C89D-3167-4ACA-8C6D-D1195AE4EDAE}</Project>
       <Name>Alya.Util</Name>

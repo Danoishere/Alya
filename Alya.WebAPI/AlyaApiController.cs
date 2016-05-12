@@ -14,6 +14,7 @@ namespace Alya.WebAPI
         public IRepository<TEntityBase> Repository { get; set; } = RepositoryFactory.Create<TEntityBase>();
 
         [HttpPost]
+        [Route]
         public async Task<IHttpActionResult> Insert(TEntityBase entity)
         {
             await Repository.Insert(entity);
@@ -21,20 +22,16 @@ namespace Alya.WebAPI
         }
 
         [HttpPut]
+        [Route]
         public async Task<IHttpActionResult> Update(TEntityBase entity)
         {
             await Repository.Update(entity);
             return Ok(entity);
         }
 
-        [HttpDelete]
-        public async Task<IHttpActionResult> Delete(TEntityBase entity)
-        {
-            await Repository.Delete(entity);
-            return Ok(true);
-        }
 
         [HttpDelete]
+        [Route("{entityId}")]
         public async Task<IHttpActionResult> Delete(int entityId)
         {
             await Repository.DeleteById(entityId);
@@ -42,6 +39,7 @@ namespace Alya.WebAPI
         }
 
         [HttpGet]
+        [Route("{entityId}")]
         public async Task<IHttpActionResult> GetById(int entityId)
         {
             var entity = await Repository.GetById(entityId);
@@ -49,7 +47,25 @@ namespace Alya.WebAPI
         }
 
         [HttpGet]
+        [Route]
         public async Task<IHttpActionResult> GetAll()
+        {
+            var entities = await Repository.GetAll();
+            return Ok(entities);
+        }
+
+        [HttpGet]
+        [Route("filter={filterString}")]
+        public async Task<IHttpActionResult> GetFiltered(string filterString)
+        {
+            var entities = await Repository.GetAll();
+            return Ok(entities);
+        }
+
+
+        [HttpGet]
+        [Route("count={amount}")]
+        public async Task<IHttpActionResult> GetAmount(int amount)
         {
             var entities = await Repository.GetAll();
             return Ok(entities);

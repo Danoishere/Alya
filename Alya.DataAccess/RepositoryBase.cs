@@ -52,6 +52,18 @@ namespace Alya.DataAccess
             }
         }
 
+        public async Task<IList<TEntity>> GetAmount(int amount)
+        {
+            using (var context = DataAccess.Context)
+            {
+                return await context
+                    .Set<TEntity>()
+                    .AsNoTracking()
+                    .Take(amount)
+                    .ToListAsync();
+            }
+        }
+
         public async Task<IList<TEntity>> GetByExpression(Expression<Func<TEntity, bool>> expression)
         {
             using (var context = DataAccess.Context)

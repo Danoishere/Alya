@@ -16,6 +16,7 @@ namespace Alya.DataAccess
         Task DeleteById(int id);
 
         Task<IList<TEntity>> GetAll();
+        Task<IList<TEntity>> GetAmount(int amount);
         Task<TEntity> GetById(int id);
         Task<TEntity> GetFirst();
 
