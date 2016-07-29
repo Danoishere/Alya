@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="Danos CV, made with the amazing Flatfy Free Flat and Responsive HTML5 Template (many thanks!)">
+    <meta name="author" content="Dano himself">
+
+    <title>@ViewBag.Title | Alya</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Custom Google Web Font -->
+    <link href="~/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Arvo:400,700' rel='stylesheet' type='text/css'>
+
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    <!--[if IE 9]>
+        <script src="/PIE_IE9.js"></script>
+    <![endif]-->
+    <!--[if lt IE 9]>
+        <script src="js/PIE_IE678.js"></script>
+    <![endif]-->
+    <!--[if lt IE 9]>
+        <script src="js/html5shiv.js"></script>
+    <![endif]-->
+
+</head>
+<body id="home">
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div id="status"></div>
+    </div>
+
+    @if (ViewBag.ShowIntroHeader != null && ViewBag.ShowIntroHeader == true)
+    {
+    <!-- FullScreen -->
+        <div class="intro-header">
+            <div class="col-xs-12 text-center abcen1">
+                <h1 class="h1_home wow fadeIn" data-wow-delay="0.4s">Dano Roost</h1>
+                <h3 class="h3_home wow fadeIn" data-wow-delay="0.6s">{ Software Engineer }</h3>
+                <ul class="list-inline intro-social-buttons">
+                    <li>
+                        <a href="https://twitter.com/galantiandrea" class="btn  btn-lg mybutton_cyano wow fadeIn" data-wow-delay="0.8s"><span class="network-name">Twitter</span></a>
+                    </li>
+                    <li id="download">
+                        <a href="#downloadlink" class="btn  btn-lg mybutton_standard wow swing wow fadeIn" data-wow-delay="1.2s"><span class="network-name">Free Download</span></a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.container -->
+            <div class="col-xs-12 text-center abcen wow fadeIn">
+                <div class="button_down ">
+                    <a class="imgcircle wow bounceInUp" data-wow-duration="1.5s" data-scroll="#content-display"> <img class="img_scroll" src="~/img/icon/circle.png" alt=""> </a>
+                </div>
+            </div>
+        </div>
+    }
+
+    <!-- NavBar-->
+    <nav class="navbar-default" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="">I am Dano</a>
+            </div>
+
+            <div class="collapse navbar-collapse navbar-right navbar-ex1-collapse">
+                @if (Request.IsAuthenticated)
+                {
+                    <ul class="nav navbar-nav">
+                        <li><a href="@Html.LocalPath("About","Home")">Overview</a></li>
+                    </ul>
+                }
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </nav>
+
+    <div id="content-display" class="content-section-a">
+        <div class="container">
+            <div id="page-content">
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/design")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/alya")
+
+    <script src="~/Scripts/wow.min.js"></script>
+    <script src="~/Scripts/stickUp.min.js"></script>
+    <script type="text/javascript">
+        jQuery(function ($) {
+            $(document).ready(function () {
+                $('.navbar-default').stickUp();
+            });
+        });
+    </script>
+
+    @RenderSection("Scripts", required: false)
+
+</body>
+</html>

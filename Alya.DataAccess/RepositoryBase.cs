@@ -16,11 +16,16 @@ namespace Alya.DataAccess
         {
             return Activator.CreateInstance<RepositoryBase<TRepositoryEntity>>();
         }
+
+        public static TRepository CreateCustom<TRepository>() where TRepository : IRepository
+        {
+            return Activator.CreateInstance<TRepository>();
+        }
     }
 
-    public class RepositoryBase<TEntity> : IRepository<TEntity> where TEntity : EntityBase
+    public class RepositoryBase<TEntity> : IRepository<TEntity>, IDisposable where TEntity : EntityBase
     {
-        protected RepositoryBase(){}
+        public RepositoryBase(){}
 
         public async Task Delete(TEntity entity)
         {
@@ -41,7 +46,7 @@ namespace Alya.DataAccess
             }
         }
 
-        public async Task<IList<TEntity>> GetAll()
+        public async Task<IEnumerable<TEntity>> GetAll()
         {
             using (var context = DataAccess.Context)
             {
@@ -52,7 +57,7 @@ namespace Alya.DataAccess
             }
         }
 
-        public async Task<IList<TEntity>> GetAmount(int amount)
+        public async Task<IEnumerable<TEntity>> GetAmount(int amount)
         {
             using (var context = DataAccess.Context)
             {
@@ -64,7 +69,7 @@ namespace Alya.DataAccess
             }
         }
 
-        public async Task<IList<TEntity>> GetByExpression(Expression<Func<TEntity, bool>> expression)
+        public async Task<IEnumerable<TEntity>> GetByExpression(Expression<Func<TEntity, bool>> expression)
         {
             using (var context = DataAccess.Context)
             {
@@ -118,6 +123,11 @@ namespace Alya.DataAccess
                 context.Entry(entity).State = EntityState.Modified;
                 await context.SaveChangesAsync();
             }
+        }
+
+        public void Dispose()
+        {
+            GC.Collect();
         }
     }
 }

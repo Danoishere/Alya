@@ -8,19 +8,24 @@ using System.Threading.Tasks;
 
 namespace Alya.DataAccess
 {
-    public interface IRepository<TEntity> where TEntity : EntityBase
+    public interface IRepository
+    {
+
+    }
+
+    public interface IRepository<TEntity> : IRepository, IDisposable where TEntity : EntityBase
     {
         Task Insert(TEntity entity);
         Task Update(TEntity entity);
         Task Delete(TEntity entity);
         Task DeleteById(int id);
 
-        Task<IList<TEntity>> GetAll();
-        Task<IList<TEntity>> GetAmount(int amount);
+        Task<IEnumerable<TEntity>> GetAll();
+        Task<IEnumerable<TEntity>> GetAmount(int amount);
         Task<TEntity> GetById(int id);
         Task<TEntity> GetFirst();
 
         Task<TEntity> GetSingleByExpression(Expression<Func<TEntity,bool>> expression);
-        Task<IList<TEntity>> GetByExpression(Expression<Func<TEntity,bool>> expression);
+        Task<IEnumerable<TEntity>> GetByExpression(Expression<Func<TEntity,bool>> expression);
     }
 }
