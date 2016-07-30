@@ -14,26 +14,29 @@
         </div><!-- /.col-lg-4 -->
     </a>
 
-    <a href="@Html.LocalPath("
-    <div class="col-sm-4 wow fadeInDown text-center">
-        <img class="rotate" src="~/img/icon/mortarboard.svg" height="100" width="100" alt="Mortarboard icon">
-        <h3>My skills</h3>
-        <p class="lead">Everything I've learned, the things I'm currently learing and the stuff I plan to learn </p>
-        <!-- <p><a class="btn btn-embossed btn-primary view" role="button">View Details</a></p> -->
-    </div><!-- /.col-lg-4 -->
+    <a href="@Html.LocalPath("MySkills", "Home")">
+        <div class="col-sm-4 wow fadeInDown text-center">
+            <img class="rotate" src="~/img/icon/mortarboard.svg" height="100" width="100" alt="Mortarboard icon">
+            <h3>My skills</h3>
+            <p class="lead">Everything I've learned, the things I'm currently learing and the stuff I plan to learn </p>
+            <!-- <p><a class="btn btn-embossed btn-primary view" role="button">View Details</a></p> -->
+        </div><!-- /.col-lg-4 -->
+    </a>
 
-    <div class="col-sm-4 wow fadeInDown text-center">
-        <img class="rotate" src="~/img/icon/medal.svg" alt="Medal icon">
-        <h3>Certificates &amp; prices</h3>
-        <p class="lead">During my time at my last company, I had the chance to take part in some contests  </p>
-        <!-- <p><a class="btn btn-embossed btn-primary view" role="button">View Details</a></p> -->
-    </div><!-- /.col-lg-4 -->
+    <a href="@Html.LocalPath("Qualification", "Home")">
+        <div class="col-sm-4 wow fadeInDown text-center">
+            <img class="rotate" src="~/img/icon/medal.svg" alt="Medal icon">
+            <h3>Certificates &amp; prices</h3>
+            <p class="lead">During my time at my last company, I had the chance to take part in some contests  </p>
+            <!-- <p><a class="btn btn-embossed btn-primary view" role="button">View Details</a></p> -->
+        </div><!-- /.col-lg-4 -->
+    </a>
 
 </div><!-- /.row -->
 
 <div class="row tworow">
     <div class="col-md-12 text-center">
-        <a href="#/Section/ContactMe" class="btn btn-lg btn-embossed btn-primary">
+        <a href="@Html.LocalPath("Contact","Home")" class="btn btn-lg btn-embossed btn-primary">
             Show contact details
         </a>
     </div>

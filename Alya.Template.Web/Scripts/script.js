@@ -6,6 +6,8 @@ Build: 1.0
 http://www.andreagalanti.it
 */
 
+var wow;
+
 $(window).on('load', function () {
     //Preloader 
     $('#status').delay(300).fadeOut();
@@ -14,8 +16,6 @@ $(window).on('load', function () {
 })
 
 $(document).ready(function () {
-
-    
 
     //animated logo
     $(".navbar-brand").hover(function () {
@@ -30,9 +30,11 @@ $(document).ready(function () {
     //Wow Animation DISABLE FOR ANIMATION MOBILE/TABLET
     wow = new WOW(
     {
-        mobile: false
+        mobile: false,
+        live: true
     });
     wow.init();
+  
 
     //MagnificPopup
     $('.image-link').magnificPopup({ type: 'image' });

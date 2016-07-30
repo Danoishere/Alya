@@ -10,27 +10,30 @@ namespace Alya.Template.Web.Controllers
     [Authorize]
     public class HomeController : AlyaMvcController
     {
-        public ActionResult Index()
-        {
-            ViewBag.ShowIntroHeader = true;
-            return AlyaView();
-        }
-
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
             return AlyaView();
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
             return AlyaView();
         }
 
         public ActionResult Overview()
         {
             ViewBag.ShowIntroHeader = true;
+            return AlyaView();
+        }
+
+        public ActionResult MySkills()
+        {
+            ViewBag.SkillList = ApplicationData.Instance.Skills;
+            return AlyaView();
+        }
+
+        public ActionResult Qualification()
+        {
             return AlyaView();
         }
     }

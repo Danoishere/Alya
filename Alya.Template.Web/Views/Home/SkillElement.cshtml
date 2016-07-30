@@ -1,0 +1,22 @@
+﻿@model Skill
+@{
+    var starSpeed = 4.3;
+}
+<div class="col-sm-6">
+    <b class="text-left">@Model.Title</b>
+    <div class="text-right pull-right">
+        @for (int i = 0; i < Model.Stars; i++)
+        {
+            var delay = i / starSpeed;
+            <i class="fa fa-star wow bounceIn" data-wow-duration="0.3s" data-wow-delay="@(delay)s"></i>
+        }
+        @for (int i = 0; i < Model.EmptyStars; i++)
+        {
+            var delay = i / starSpeed + Model.Stars / starSpeed;
+            <i class="fa fa-star-o wow bounceIn" data-wow-duration="0.3s" data-wow-delay="@(delay)s"></i>
+        }
+    </div>
+    <br />
+    <p>@Model.Description</p>
+</div>
+
