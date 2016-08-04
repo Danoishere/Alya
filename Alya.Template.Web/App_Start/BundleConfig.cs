@@ -45,7 +45,8 @@ namespace Alya.Template.Web
                  "~/Content/magnific-popup.css",
                  "~/Content/owl.carousel.css",
                  "~/Content/owl.theme.css",
-                 "~/Content/style.css"));
+                 "~/Content/style.css",
+                 "~/Content/Site.css"));
         }
     }
 }

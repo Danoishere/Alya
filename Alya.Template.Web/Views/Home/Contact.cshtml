@@ -1,17 +1,21 @@
 ﻿@{
-    ViewBag.Title = "Contact";
+    ViewBag.Title = "Contact me";
 }
 <h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
+@if (ViewBag.Message != null)
+{
+    <h3>@ViewBag.Message</h3>
+}
 
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
-
-<address>
-    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+@using (Html.BeginForm("Contact","Home"))
+{
+    <div class="row">
+        <div class="col-sm-12">
+            <label class="control-label">Your message to Dano. Please include a mail address, a phone number or another way, how Dano can contact you back</label>
+            <textarea class="form-control" name="message" rows="6"></textarea>
+        </div>
+        <div class="col-sm-12">
+            <input class="btn btn-success top10 bottom10" type="submit" value="Send to Dano" />
+        </div>
+    </div>
+}

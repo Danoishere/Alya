@@ -172,7 +172,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ApplicationData.cs" />
+    <Compile Include="App_Data\ApplicationData.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
@@ -224,7 +224,65 @@
     <Content Include="Content\Site.css" />
     <Content Include="img\circle.png" />
     <Content Include="img\cross.png" />
+    <Content Include="img\dano.jpg" />
     <Content Include="img\doge.png" />
+    <Content Include="img\icon\airplane.svg" />
+    <Content Include="img\icon\collaboration.svg" />
+    <Content Include="img\icon\computer-desk.svg" />
+    <Content Include="img\icon\chairman.svg" />
+    <Content Include="img\icon\virtualreality.svg" />
+    <Content Include="img\icon\bank.svg" />
+    <Content Include="img\icon\beacon.svg" />
+    <Content Include="img\icon\beats.svg" />
+    <Content Include="img\icon\bell.svg" />
+    <Content Include="img\icon\bicycle.svg" />
+    <Content Include="img\icon\book.svg" />
+    <Content Include="img\icon\box.svg" />
+    <Content Include="img\icon\boy.svg" />
+    <Content Include="img\icon\browser.svg" />
+    <Content Include="img\icon\bulb.svg" />
+    <Content Include="img\icon\calendar.svg" />
+    <Content Include="img\icon\casino.svg" />
+    <Content Include="img\icon\chair.svg" />
+    <Content Include="img\icon\chat.svg" />
+    <Content Include="img\icon\circle.png" />
+    <Content Include="img\icon\circledown.svg" />
+    <Content Include="img\icon\clipboard.svg" />
+    <Content Include="img\icon\clocks.svg" />
+    <Content Include="img\icon\compas.svg" />
+    <Content Include="img\icon\config.svg" />
+    <Content Include="img\icon\cup.svg" />
+    <Content Include="img\icon\folder.svg" />
+    <Content Include="img\icon\football.svg" />
+    <Content Include="img\icon\gift-box.svg" />
+    <Content Include="img\icon\headphones.svg" />
+    <Content Include="img\icon\heart.svg" />
+    <Content Include="img\icon\laptop.svg" />
+    <Content Include="img\icon\letter.svg" />
+    <Content Include="img\icon\like.svg" />
+    <Content Include="img\icon\loop.svg" />
+    <Content Include="img\icon\mail.svg" />
+    <Content Include="img\icon\map.svg" />
+    <Content Include="img\icon\medal.svg" />
+    <Content Include="img\icon\mic.svg" />
+    <Content Include="img\icon\milk.svg" />
+    <Content Include="img\icon\mortarboard.svg" />
+    <Content Include="img\icon\mountain.svg" />
+    <Content Include="img\icon\paper-bag.svg" />
+    <Content Include="img\icon\pencil.svg" />
+    <Content Include="img\icon\pencils.svg" />
+    <Content Include="img\icon\picture.svg" />
+    <Content Include="img\icon\polaroid.svg" />
+    <Content Include="img\icon\printer.svg" />
+    <Content Include="img\icon\retina.svg" />
+    <Content Include="img\icon\search.svg" />
+    <Content Include="img\icon\shopping bag.svg" />
+    <Content Include="img\icon\speed.svg" />
+    <Content Include="img\icon\stopwatch.svg" />
+    <Content Include="img\icon\tactics.svg" />
+    <Content Include="img\icon\toilet-paper.svg" />
+    <Content Include="img\icon\tweet.svg" />
+    <Content Include="img\icon\watch.svg" />
     <Content Include="img\ipad.png" />
     <Content Include="img\iphone.png" />
     <Content Include="img\phones.png" />
@@ -370,8 +428,6 @@
     <Content Include="Views\Home\SkillElement.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
-    <Folder Include="img\icon\" />
     <Folder Include="img\intro\" />
     <Folder Include="img\slide\" />
   </ItemGroup>
@@ -383,6 +439,10 @@
     <Content Include="Scripts\jquery-3.1.0.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Alya.MailEngine\Alya.MailEngine.csproj">
+      <Project>{3a8c98d6-a8b4-4eec-b4b4-dc0074b6ffa4}</Project>
+      <Name>Alya.MailEngine</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Alya.Web\Alya.Web.csproj">
       <Project>{d83181cf-e4b6-4fb1-a458-886722c3bf26}</Project>
       <Name>Alya.Web</Name>

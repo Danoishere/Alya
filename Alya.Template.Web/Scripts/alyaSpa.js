@@ -16,5 +16,9 @@ var navigateToHashAddress = function () {
         $('#' + contentContainerId).load(localAddress);
     }
 
+    if (location.href == location.protocol + "//" + location.host + '/'){
+        $('#' + contentContainerId).load('/');
+    }
+
     console.log('Load ' + localAddress + ' and add it to ' + contentContainerId);
 }

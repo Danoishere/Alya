@@ -45,7 +45,7 @@
                 <h3 class="h3_home wow fadeIn" data-wow-delay="0.6s">{ Software Engineer }</h3>
                 <ul class="list-inline intro-social-buttons">
                     <li>
-                        <a href="https://twitter.com/galantiandrea" class="btn  btn-lg mybutton_cyano wow fadeIn" data-wow-delay="0.8s"><span class="network-name">Twitter</span></a>
+                        <a href="https://ch.linkedin.com/in/dano-roost-935ab9a6" class="btn  btn-lg mybutton_cyano wow fadeIn" data-wow-delay="0.8s"><span class="network-name">LinkedIn</span></a>
                     </li>
                     <li id="download">
                         <a href="#downloadlink" class="btn  btn-lg mybutton_standard wow swing wow fadeIn" data-wow-delay="1.2s"><span class="network-name">Free Download</span></a>
@@ -71,16 +71,14 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
+                @if (ViewBag.ShowIntroHeader != null && ViewBag.ShowIntroHeader == true && Request.IsAuthenticated)
+                {
+                    <img src="~/img/dano.jpg" class="pull-left img-circle" height="95" width="95" style="margin-top:-20px;margin-bottom:-20px" />
+                }
                 <a class="navbar-brand" href="@Html.LocalPath("Overview","Home")">Danos Life</a>
             </div>
 
             <div class="collapse navbar-collapse navbar-right navbar-ex1-collapse">
-                @if (Request.IsAuthenticated)
-                {
-                    <ul class="nav navbar-nav">
-                        <li><a href="@Html.LocalPath("About","Home")">Overview</a></li>
-                    </ul>
-                }
                 @Html.Partial("_LoginPartial")
             </div>
         </div>
