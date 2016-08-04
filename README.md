@@ -3,10 +3,17 @@ My personal web framework with web and mobile components.
 Alya should contain everything you need to create web and mobile apps in a very short time.
 The components are
 
+
+
+
 ## Alya.Core
   Contains the entity base class (EntityBase) that is used by all other parts to work with data.
   The EntityBase class uses Fody.PropertyChanged, an automated implementation of the observer pattern, 
   to make it easier to use in WPF and Xamarin projects.
+
+
+
+
 
 ## Alya.DataAccess
   Contains a base class for the DataContext (AlyaDbContextBase), that makes it easier to use Entity Framework.
@@ -31,5 +38,10 @@ The components are
   // Generates a generic Project Repository (RepositoryBase<Project>) that implements IRepository
   var projectRepository = RepositoryFactory.CreateCustom<MyProjectRepository>();
   ```
-  
-  
+
+
+
+
+## Alya.DataClient
+  This is the piece that works togehter with the REST-Services from a client side. It also contains all the CRUD operations.
+  (More detailed description will follow)
