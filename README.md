@@ -23,3 +23,13 @@ The components are
   // Generates a generic Project Repository (RepositoryBase<Project>) that implements IRepository
   var projectRepository = RepositoryFactory.Create<Project>();
   ```
+  
+  If you already have a custom implementation of a ProjectRepository (should also inherit from IRepository), you can create it 
+  with the RepositoryFactory as well.
+  
+  ```cs
+  // Generates a generic Project Repository (RepositoryBase<Project>) that implements IRepository
+  var projectRepository = RepositoryFactory.CreateCustom<MyProjectRepository>();
+  ```
+  
+  
